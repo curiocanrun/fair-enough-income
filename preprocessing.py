@@ -9,8 +9,11 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import fetch_openml
 
-data = fetch_openml('adult', version=2, as_frame=True, parser='pandas')
-df = data.frame
+# alternate 
+# data = fetch_openml('adult', version=2, as_frame=True, parser='pandas')
+# df = data.frame
+
+df = pd.read_csv('adult.csv', skipinitialspace=True)
 
 df = df.replace('?', 'Unknown')
 
