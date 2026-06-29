@@ -7,15 +7,10 @@ Protected Attribute: gender = 0 (Female), 1 (Male)
 
 import numpy as np
 import pandas as pd
-from pathlib import Path
+from sklearn.datasets import fetch_openml
 
-# ROOT = Path(__file__).parent
-# DATASET_PATH = ROOT / "datasets" / "adult.csv"
-
-# if not DATASET_PATH.exists():
-#     raise FileNotFoundError(f"Dataset not found: {DATASET_PATH}")
-
-df = pd.read_csv('adult.csv', skipinitialspace=True)
+data = fetch_openml('adult', version=2, as_frame=True, parser='pandas')
+df = data.frame
 
 df = df.replace('?', 'Unknown')
 
