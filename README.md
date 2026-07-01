@@ -1,12 +1,10 @@
 <small>
 
-## Fair Adult Income Prediction
+### Fair Adult Income Prediction
 
 Can we predict income without unfairly favoring one gender over another?
 
-We explore this question on the Adult Income dataset. A standard XGBoost model shows clear bias - men are over-predicted as high earners. We try balancing protected groups using SMOTE. It doesn't help much. The bias is not in gender itself but in proxies like occupation, hours, and education.
-
-Finally, we apply a post-processing technique: we adjust decision thresholds separately for each group. This works. Equalized Odds drops below 0.1 while accuracy stays the same.
+We explore this question on the Adult Income dataset.
 
 #### References
 
